@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<title>Карточка товара</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<!-- swiper styles -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<!-- rating styles -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+<!-- main styles -->
+<link rel="stylesheet" href="css/styles.min.css">
+
+<body>
+
+<div class="container">
+  <article class="product-card">
+    <div class="product-card__gallery">     
+      <div class="rating-container">
+        <h6 class="product-card__status">Bestseller</h6>
+        <div class="rating"></div>
+        <span class="current-rating"></span>     
+      </div>
+      <div class="slider-section">
+        <div class="swiper-container gallery-top">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="./img/slideP.png" alt=""></div>
+            <div class="swiper-slide"><img src="./img/slideP.png" alt=""></div>
+            <div class="swiper-slide"><img src="./img/slideP.png" alt=""></div>
+            <div class="swiper-slide"><img src="./img/slideP.png" alt=""></div>
+            <div class="swiper-slide"><img src="./img/slideP.png" alt=""></div>           
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>  
+          
+        </div>
+        <div class="swiper-container gallery-thumbs">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(./img/slide1.png)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/slide2.png)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/slide3.png)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/slide4.png)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/slide5.png)"></div>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <aside class="product-card__aside"> 
+      <h6 class="product-card__status text-shadow-right-after">Bestseller</h6>   
+      <section class="rating-container">
+        <div class="rating"></div>
+        <span class="current-rating"></span>  
+        <h6 class="vendor-code">арт.12345</h6>           
+      </section> 
+      
+      <h1 class="product-card__name  text-shadow-right-after">Apple iPhone X</h1>
+      <div class="product-card__price">$1,090
+        <span class="product-card__price__discount">$1,090</span>
+      </div>
+       <p class="product-card__description text-shadow-bottom-after">
+        The Greeks, who were the first to explore geography 
+        as both art and science, achieved this through Cartography, Philosophy, 
+        and Literature, or through Mathematics. There is The Greeks, who were the first to explore
+         geography as both art and science, achieved this through Cartography, Philosophy, and Literature, or through Mathematics. There is 
+       </p>
+      <form class="product-form">
+        <fieldset class="product-form__row">  
+         <label for="color-select" class="product-form__label text-shadow-right-after">Color</label>
+         <select class="product-form__select" name="color-select" id="color-select">
+           <option value="">оранжевый</option>
+           <option value="">фиолетовый</option>
+         </select>   
+        </fieldset>  
+        <fieldset class="product-form__row">  
+          <label for="capacity-select" class="product-form__label text-shadow-right-after" for="">Capacity</label>
+          <select class="product-form__select" name="capacity-select" id="capacity-select">
+            <option value="">64 Gb</option>
+            <option value="">32 Gb</option>
+          </select>   
+         </fieldset> 
+         <fieldset class="product-form__row">  
+          <label class="product-form__label text-shadow-right-after" for="">Quantity</label>
+          <div class="add-cart-counter__controls">
+            <button class="add-cart-counter__controls_btn">-</button>
+            <span class="add-cart-counter__controls__count">1</span>
+            <button class="add-cart-counter__controls_btn">+</button>
+          </div> 
+          <span class="add-cart-counter__controls__total text-shadow-right-after">2 available</span>     
+         </fieldset>       
+        <footer class="form-footer">
+          <div class="row">
+            <div class="prosduct-status in--stock">
+              В наличии
+            </div>
+            <div class="btns-controls">
+              <button class="btns-controls_btn like"></button>
+              <button class="btns-controls_btn statistics"></button>
+            </div>
+          </div>
+          <section class="price-block-big">
+            <div class="product-card__price">$1,090
+              <span class="product-card__price__discount">$1,090</span>
+            </div>
+            <div class="btns-controls">
+              <button class="btns-controls_btn like"></button>
+              <button class="btns-controls_btn statistics"></button>
+            </div>
+          </section>
+          <section class="btns-buy-group">
+            <button class="btns-buy_btn buy-one-click">Купить в 1 клик</button>
+            <button class="btns-buy_btn add-to-card"><span class="add-to-card__text">Добавить в корзину</span></button>
+          </section>
+        </footer>
+      </form>
+    </aside>
+  </article>
+</div>
+
+
+
+
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- swiper plugin -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- rating plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+</html>
