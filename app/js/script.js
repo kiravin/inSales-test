@@ -46,8 +46,8 @@ $(document).ready(function() {
           clickable: true
         },
       },
-      // when window width is >= 768px
-      768: {
+      // when window width is >= 767px
+      767: {
         slidesPerView: 1,
         spaceBetween: 0
       }      
